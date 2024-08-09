@@ -2,12 +2,7 @@ const meetingsRouter = require('express').Router();
 
 module.exports = meetingsRouter;
 
-const {
-   getAllFromDatabase,
-   addToDatabase,
-   deleteAllFromDatabase,
-   createMeeting
-} = require('./db');
+const { getAllFromDatabase, addToDatabase, deleteAllFromDatabase, createMeeting } = require('./db');
 
 meetingsRouter.get('/', (req, res, next) => {
    res.send(getAllFromDatabase('meetings'));

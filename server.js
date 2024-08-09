@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4001;
 const cors = require('cors');
 app.use(cors());
 
-// Add middware for parsing request bodies here:
+// Add middleware for parsing request bodies here:
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
@@ -20,11 +20,9 @@ app.use(bodyParser.json());
 const apiRouter = require('./server/api');
 app.use('/api', apiRouter);
 
-
 // This conditional is here for testing purposes:
 if (!module.parent) {
   // Add your code to start the server listening at PORT below:
-
   app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
   });
